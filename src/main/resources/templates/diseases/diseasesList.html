@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title> Diseases </title>
+</head>
+
+<body>
+ 
+<div id="header">
+    
+</div>
+
+
+<div id="content">
+    <form action="#"  th:object="${disease}" method="get">
+    <label for="name">ID</label>
+    <input type="text" th:field="id" id="id" placeholder="ID"  hidden="true" readonly="true" >
+     <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+   
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name" readonly="true">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    
+    <label for="desciption">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description" readonly="true">
+    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+    <div>
+    <input type="submit" value="Previous" ><input th:click="submit" value="Next" >
+     </div>  
+</form>
+</div>
+
+<div id="footer">
+  
+</div>
+
+</body>
+
+</html>
