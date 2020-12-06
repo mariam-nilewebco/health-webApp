@@ -69,6 +69,50 @@
 				</form:form>
 </div>
                         </div>
+                    
+                    <!-- Disease Symptoms List -->
+                       <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                <h3>${disease.name} Symptom</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Description</th> 
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                               <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                 
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <c:forEach items="${disease.symptoms}" var="symptom">
+                                            <tr>
+                                                <td>${symptom.id}</td>
+                                                <td>${symptom.name}</td>
+                                                <td>${symptom.description}</td>
+                                               
+							 
+                                            </tr>
+                                           
+                                            </c:forEach>
+                                        </tbody>
+                                    </table>
+       
+                                </div>
+                            </div>
+                        </div>
+                    <!-- End Disease Symptoms List -->
                     </div>
                 </main>
                
