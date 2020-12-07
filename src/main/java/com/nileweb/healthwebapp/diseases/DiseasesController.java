@@ -5,6 +5,8 @@ package com.nileweb.healthwebapp.diseases;
 import java.util.List;
    
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation. BindingResult; 
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.web.bind.annotation.GetMapping; 
@@ -50,19 +52,23 @@ public class DiseasesController {
 
 
 	@PostMapping("/save")
-	public ModelAndView save( Diseases disease, BindingResult result) {
+	public String save(@Valid Diseases disease, BindingResult result,ModelMap m) {
 		// ---
 		System.out.println("create");
 		System.err.println(disease);
 
 		// Diseases disease=new Diseases("Cough","Cough",5L);
 		try {
-			disease = disasesService.save(disease);
-			return findAll();
+			
+			disease = disasesService.save(disease); 
+			m.addAttribute("diseases",disasesService.findAll());
+			return "diseases/diseasesList";
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			m.addAttribute("errorMsg"," name/id exist , please check the name or ID");
+			m.addAttribute("disease",disease);
+			return  "diseases/diseasesAdd";
 		}
 	}
  

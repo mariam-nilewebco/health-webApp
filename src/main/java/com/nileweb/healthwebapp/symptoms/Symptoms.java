@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.validator.constraints.UniqueElements;
+import org.neo4j.ogm.annotation.Index;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
@@ -23,8 +24,10 @@ public class Symptoms {
 
 	@Id
 	//@GeneratedValue
+	@Index(unique = true)
 	private Long id;
 	@Property("name") 
+	@Index(unique = true)
 	private String name;
 	@Property("description")
 	private String description;

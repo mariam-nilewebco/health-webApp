@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -45,7 +46,7 @@ public class SymptomsController {
 		return mav;
 	}
 	@PostMapping("/save")
-	public ModelAndView save( Symptoms symptom, BindingResult result) {
+	public String save( Symptoms symptom, BindingResult result,ModelMap m) {
 		// ---
 		System.out.println("create");
 		System.err.println(symptom);
@@ -53,11 +54,14 @@ public class SymptomsController {
 		// Diseases disease=new Diseases("Cough","Cough",5L);
 		try {
 			symptom = symtpomsService.save(symptom);
-			return findAll();//create();
+			m.addAttribute("symptoms", symtpomsService.findAll()); 
+			return "symptoms/symptomsList";//create();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			m.addAttribute("errorMsg"," name/id exist , please check the name or ID");
+			m.addAttribute("symptom",symptom);
+			return "symptoms/symptomsAdd";
 		}
 	}
 	

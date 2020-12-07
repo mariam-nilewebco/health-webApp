@@ -17,7 +17,8 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
- 
+
+import org.neo4j.ogm.annotation.Index;
 //import org.neo4j.*;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.springframework.data.neo4j.core.schema.*;
@@ -33,8 +34,10 @@ public class Diseases implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	//@GeneratedValue
+	@Index(unique = true)
 	private Long id;
 	@Property(name = "name")
+	@Index(unique = true)
 	private String name;
 	@Property(name = "description")
 	private String description;

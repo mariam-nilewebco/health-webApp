@@ -44,6 +44,9 @@
 					 
 
 				</div>
+				<br>
+				<small class="text-danger">${errorMsg }</small>
+				<br><br>
 				<div class="form-row">
 			  
 				 	 	<button type="submit" class="btn btn-primary">Save</button>

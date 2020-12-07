@@ -39,7 +39,7 @@ List<Symptoms> symptoms=symtpomsService.findAll();
 		return symptoms ;
 	}
 	private ModelAndView navResult(String nav,Long id) {
-		ModelAndView mav = new ModelAndView("diseases/diseasesSymptom.jsp");
+		ModelAndView mav = new ModelAndView("diseases/diseasesSymptom");
 
 		Map<String,Object> map=disasesService.navigate(nav,id);
 		

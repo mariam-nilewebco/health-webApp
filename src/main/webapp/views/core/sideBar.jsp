@@ -11,16 +11,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Diseases List</title>
- <link href="${pageContext.request.contextPath}/webjars/bootstrap/4.1.3/css/bootstrap.min.css"
+ <link href="${pageContext.request.contextPath}/webjars/bootstrap/4.5.3/css/bootstrap.min.css"
         rel="stylesheet">
          <link href="${pageContext.request.contextPath}/resources/style.css"
         rel="stylesheet">
         
         <link href="${pageContext.request.contextPath}/resources/css/styles.css" rel="stylesheet" />
         
-    <link href="${pageContext.request.contextPath}/webjars/font-awesome/css/font-awesome.min.css" rel="stylesheet"></link>
-    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.css" type="text/css" rel="stylesheet"></link>
-    
+  <!--  <link href="${pageContext.request.contextPath}/webjars/font-awesome/css/font-awesome.min.css" rel="stylesheet"></link>
+    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.min.css"  rel="stylesheet"></link>
+   --> 
+    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/css/font-awesome.min.css"  rel="stylesheet"></link>
+   <script src="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/js/fontawesome.min.js"></script>
+ 
 <!-- <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.min.css"
         rel="stylesheet"> -->
 <script type="text/javascript">
