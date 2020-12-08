@@ -51,8 +51,8 @@
 										<form method="get" 
 									action="${pageContext.request.contextPath}/Symptoms/edit/${symptom.id}">
 								
-								<button type="submit"  class="edit" title="Edit" data-toggle="tooltip">
-								edit</button>
+								<button type="submit"  class="edit fas fa-pencil-alt" title="Edit" data-toggle="tooltip">
+								</button>
 								</form>
 								</td>
 								 
@@ -60,7 +60,7 @@
 								<form method="get"
 									action="${pageContext.request.contextPath}/Symptoms/delete/${symptom.id}">
 								 
-									<button type="submit" value="Delete" class="btn small" >delete</button>
+									<button type="submit" value="Delete" class="btn btn-info fas fa-trash-alt" ></button>
 								</form> 
 							</td>
                                             </tr>

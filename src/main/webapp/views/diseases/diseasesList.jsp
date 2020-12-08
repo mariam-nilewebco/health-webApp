@@ -53,14 +53,14 @@
 										<form method="get" 
 									action="${pageContext.request.contextPath}/disasesSymptoms/addSymptom/${disease.id}">
 								
-								<button type="submit"  class="edit" title="details" data-toggle="tooltip">details</button>
+								<button type="submit"  class="btnLink fas fa-book" title="details" data-toggle="tooltip"></button>
 								</form>
 								</td>
                                                 <td>
 										<form method="get" 
 									action="${pageContext.request.contextPath}/Diseases/edit/${disease.id}">
 								
-								<button type="submit"  class="edit" title="Edit" data-toggle="tooltip">	edit</button>
+								<button type="submit" title="Delete" class="edit fas fa-pencil-alt" data-toggle="tooltip"></button>
 								</form>
 								</td>
 								 
@@ -68,7 +68,7 @@
 								<form method="get"
 									action="${pageContext.request.contextPath}/Diseases/delete/${disease.id}">
 								 
-									<button type="submit" title="Delete" class="edit" data-toggle="tooltip">delete</button>
+									<button type="submit" title="Delete" class="edit fas fa-trash-alt" data-toggle="tooltip"></button>
 								</form> 
 							</td>
                                             </tr>

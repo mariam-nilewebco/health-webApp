@@ -1,3 +1,11 @@
 .trans{
 	border-width: 0;
 }
+
+.btnLink{
+	border: none;
+	 background: none; 
+	 display: inline;
+	  color: blue; 
+	  text-decoration: underline;
+}

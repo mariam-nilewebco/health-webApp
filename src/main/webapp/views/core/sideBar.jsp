@@ -21,10 +21,11 @@
   <!--  <link href="${pageContext.request.contextPath}/webjars/font-awesome/css/font-awesome.min.css" rel="stylesheet"></link>
     <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.min.css"  rel="stylesheet"></link>
    --> 
-    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/css/font-awesome.min.css"  rel="stylesheet"></link>
-   <script src="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/js/fontawesome.min.js"></script>
- 
-<!-- <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.min.css"
+    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/css/all.min.css" type="text/css" rel="stylesheet"></link>
+    <link href="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/css/font-awesome.min.css" type="text/css" rel="stylesheet"></link>
+  <script src="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/js/fontawesome.min.js"></script>
+  
+ <!--<link href="${pageContext.request.contextPath}/webjars/font-awesome/5.8.2/css/font-awesome.min.css"4.7.0
         rel="stylesheet"> -->
 <script type="text/javascript">
 function navigate(evt){
@@ -76,9 +77,9 @@ function navigate(evt){
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                              
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <div class="sb-sidenav-menu-heading">Health</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-disease"></i></div>
                                 Diseases
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -89,7 +90,7 @@ function navigate(evt){
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-head-side-cough"></i></div>
                                 Symptoms
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -98,7 +99,7 @@ function navigate(evt){
                                  <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="${pageContext.request.contextPath}/Symptoms">Add Symptoms</a>
                                             <a class="nav-link" href="${pageContext.request.contextPath}/Symptoms/list">Symptoms</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                            
                                         </nav>
                                     
                             </div>
